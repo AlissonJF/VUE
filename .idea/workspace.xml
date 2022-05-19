@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f01bb703-9023-4407-a5bb-9ed7deb5d612" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Vue/views/index/index.vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/controllers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/controllers/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/libs/Bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/libs/Bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/libs/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/libs/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/libs/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/libs/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/libs/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/libs/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/public/js/libs.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/public/js/libs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/views/index/js/index.js" beforeDir="false" />
-    </list>
+    <list default="true" id="f01bb703-9023-4407-a5bb-9ed7deb5d612" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +23,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Vue" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,7 +67,7 @@
       <workItem from="1652887824078" duration="4633000" />
       <workItem from="1652961089685" duration="742000" />
       <workItem from="1652961904196" duration="525000" />
-      <workItem from="1652969266139" duration="2322000" />
+      <workItem from="1652969266139" duration="2942000" />
     </task>
     <servers />
   </component>
