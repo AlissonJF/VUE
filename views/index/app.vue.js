@@ -42,7 +42,17 @@ const AppTemplate = `
                 :marker="marker"
                 ></e-series>
             </e-series-collection>
-        </ejs-chart> 
+        </ejs-chart>
+        <br>
+        <ejs-button
+        ref="toggleBtn"
+        :iconCss="iconCssValue"
+        cssClass="e-flat"
+        :isPrimary="true"
+        :isToggle="true"
+        v-on:click.native="btnClick"
+        :content="contentValue"
+        >Próxima Página</ejs-button>
     </div>
 </div>
 
@@ -111,8 +121,42 @@ Vue.component('AppVue', {
             tooltip: {
                 enable: true
             },
-            title: "Test Chart Component"
+            title: "Test Chart Component",
+            // Botão para próxima página
+            content: "Próxima Página",
+            iconCss: 'e-btn-sb-icons e-play-icon'
         }
     },
-    methods: {}
+    computed: {
+        contentValue: {
+            get:function () {
+                return this.content;
+            },
+            set:function (content) {
+                this.content = content
+            }
+        },
+        iconCssValue: {
+            get: function() {
+                return this.iconCss;
+            },
+            set: function (iconCss) {
+                this.iconCss = iconCss
+            }
+        }
+    },
+    methods: {
+        btnClick: function (event) {
+            console.log(BASE)
+
+            window.location.href = BASE + "/graphpage"
+            // if (this.$refs.toggleBtn.$el.classList.contains("e-active")) {
+            //     this.contentValue = "Próxima Página";
+            //     this.iconCssValue = "e-btn-sb-icons e-play-icon";
+            // } else {
+            //     this.contentValue = "Pause";
+            //     this.iconCssValue = "e-btn-sb-icons e-pause-icon";
+            // }
+        }
+    }
 })

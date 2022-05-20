@@ -70,7 +70,7 @@
 <div class="nav" id="navbar">
     <nav class="nav__container">
         <div>
-            <a href="#" class="nav__link nav__logo">
+            <a href="<?=URL?>" class="nav__link nav__logo">
                 <i class='bx bx-home nav__icon'></i>
                 <span class="nav__logo-name">HOME</span>
             </a>

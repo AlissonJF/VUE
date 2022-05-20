@@ -75,21 +75,11 @@ file_put_contents('controllers/' . $fileName . '.php', $controller);
 
 $jsView = '
 const AppTemplate = `
-<div class="col-lg-12 control-section card-control-section basic_card_layout">
-  <div class="e-card-resize-container" style="margin-bottom: 90px">
-    <div class="row">
-      <div class="row card-layout">
-        <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
-          <div tabindex="0" class="e-card" id="basic_card">
-            <div class="e-card-content">
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+<div class="control-section" style="margin-top: 5%">
+    
 </div>
+
 `;
 
 Vue.component("AppVue", {

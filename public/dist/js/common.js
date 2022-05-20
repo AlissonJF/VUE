@@ -1,4 +1,4 @@
-BASE = 'https://geddesenv.unimar.br';
+BASE = 'http://localhost/estagio/VUE';
 
 var browsers = ["Opera", "Edg", "Chrome", "Safari", "Firefox", "MSIE", "Trident"];
 var userbrowser, useragent = navigator.userAgent;
