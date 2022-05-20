@@ -1,6 +1,6 @@
 const AppTemplate = `
 
-<div class="control-section">
+<div class="control-section" style="margin-top: 5%">
     <div align='center'>
         <ejs-chart
         style="display: block"
@@ -20,7 +20,7 @@ const AppTemplate = `
                 xName="x"
                 yName="y"
                 name="Germany"
-                width=2
+                width=3
                 :marker="marker"
                 ></e-series>
                 <e-series
@@ -29,7 +29,16 @@ const AppTemplate = `
                 xName="x"
                 yName="y"
                 name="England"
-                width=2
+                width=3
+                :marker="marker"
+                ></e-series>
+                <e-series
+                :dataSource="seriesData2"
+                type="Line"
+                xName="x"
+                yName="y"
+                name="EUA"
+                width=3
                 :marker="marker"
                 ></e-series>
             </e-series-collection>
@@ -44,13 +53,13 @@ Vue.component('AppVue', {
     data: function() {
         return {
             seriesData: [
-                { x: new Date(2005, 0, 1), y: 21 },
-                { x: new Date(2006, 0, 1), y: 24 },
-                { x: new Date(2007, 0, 1), y: 36 },
+                { x: new Date(2005, 0, 1), y: 70 },
+                { x: new Date(2006, 0, 1), y: 57 },
+                { x: new Date(2007, 0, 1), y: 54 },
                 { x: new Date(2008, 0, 1), y: 38 },
-                { x: new Date(2009, 0, 1), y: 54 },
-                { x: new Date(2010, 0, 1), y: 57 },
-                { x: new Date(2011, 0, 1), y: 70 }
+                { x: new Date(2009, 0, 1), y: 36 },
+                { x: new Date(2010, 0, 1), y: 24 },
+                { x: new Date(2011, 0, 1), y: 21 }
             ],
             seriesData1: [
                 { x: new Date(2005, 0, 1), y: 28 },
@@ -60,6 +69,15 @@ Vue.component('AppVue', {
                 { x: new Date(2009, 0, 1), y: 66 },
                 { x: new Date(2010, 0, 1), y: 78 },
                 { x: new Date(2011, 0, 1), y: 84 }
+            ],
+            seriesData2: [
+                { x: new Date(2005, 0, 1), y: 50 },
+                { x: new Date(2006, 0, 1), y: 40 },
+                { x: new Date(2007, 0, 1), y: 60 },
+                { x: new Date(2008, 0, 1), y: 80 },
+                { x: new Date(2009, 0, 1), y: 75 },
+                { x: new Date(2010, 0, 1), y: 85 },
+                { x: new Date(2011, 0, 1), y: 90 }
             ],
             //Initializing Primary X Axis
             primaryXAxis: {
@@ -93,7 +111,7 @@ Vue.component('AppVue', {
             tooltip: {
                 enable: true
             },
-            title: "Test Component"
+            title: "Test Chart Component"
         }
     },
     methods: {}
