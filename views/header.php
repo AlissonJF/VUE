@@ -19,17 +19,30 @@
 
     <!-- Essentail JS2 for Vue  (All components Styles) -->
     <link href="https://cdn.syncfusion.com/ej2/20.1.55/material.css" rel="stylesheet" type="text/css"/>
-
+    <link href="<?=URL?>public/plugins/essentialui/styles/material.min.css" rel="stylesheet">
+    <link href="<?=URL?>public/plugins/fontawesome-free/css/all.css" rel="stylesheet">
     <?php if (isset($this->css)) {
         foreach ($this->css as $c) {
             echo ("<link href=\"" . URL . "$c\" rel=\"stylesheet\" type=\"text/css\">\n");
         }
     } ?>
+
     <!-- Vue library file-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js" type="text/javascript"></script>
     <!-- Essential JS 2 for Vue  global script -->
     <script src="https://cdn.syncfusion.com/ej2/20.1.55/ej2-vue-es5/dist/ej2-vue.min.js"
             type="text/javascript"></script>
+    <script src="<?= URL ?>public/plugins/essentialui/scripts/internationalization/traducaoComponentes.js" type="text/javascript"></script>
+    <script src="<?= URL ?>public/plugins/essentialui/scripts/internationalization/currencyData.js" type="text/javascript"></script>
+    <script src="<?= URL ?>public/plugins/essentialui/scripts/internationalization/currencies.js" type="text/javascript"></script>
+    <script src="<?= URL ?>public/plugins/essentialui/scripts/internationalization/numbers.js" type="text/javascript"></script>
+    <script src="<?= URL ?>public/plugins/essentialui/scripts/internationalization/languages.js" type="text/javascript"></script>
+    <script src="<?= URL ?>public/plugins/essentialui/scripts/internationalization/timeZoneNames.js" type="text/javascript"></script>
+    <script src="<?= URL ?>public/plugins/essentialui/scripts/internationalization/numberingSystems.js" type="text/javascript"></script>
+    <script src="<?= URL ?>public/plugins/essentialui/scripts/internationalization/caGregorian.js" type="text/javascript"></script>
+    <script src="<?= URL ?>public/plugins/essentialui/scripts/ej2-vue.min.js" type="text/javascript"></script>
+    <script src="<?= URL ?>public/plugins/axios/axios.min.js" type="text/javascript"></script>
+    <script src="<?= URL ?>public/dist/js/common.js" type="text/javascript"></script>
 
     <?php
     if (isset($this->js)) {
