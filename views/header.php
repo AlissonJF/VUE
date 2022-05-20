@@ -72,32 +72,32 @@
         <div>
             <a href="<?=URL?>" class="nav__link nav__logo">
                 <i class='bx bx-home nav__icon'></i>
-                <span class="nav__logo-name">HOME</span>
+                <span class="nav__logo-name">Início</span>
             </a>
 
             <div class="nav__list">
                 <div class="nav__items">
-                    <h3 class="nav__subtitle">Profile</h3>
+                    <h3 class="nav__subtitle">Perfil</h3>
 
                     <div class="nav__dropdown">
                         <a href="#" class="nav__link">
                             <i class='bx bx-user nav__icon'></i>
-                            <span class="nav__name">Profile</span>
+                            <span class="nav__name">Opções do Perfil</span>
                             <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                         </a>
 
                         <div class="nav__dropdown-collapse">
                             <div class="nav__dropdown-content">
-                                <a href="#" class="nav__dropdown-item">Passwords</a>
-                                <a href="#" class="nav__dropdown-item">Mail</a>
-                                <a href="#" class="nav__dropdown-item">Accounts</a>
+                                <a href="#" class="nav__dropdown-item">Senha</a>
+                                <a href="#" class="nav__dropdown-item">Email</a>
+                                <a href="#" class="nav__dropdown-item">Nova Conta</a>
                             </div>
                         </div>
                     </div>
 
                     <a href="#" class="nav__link">
                         <i class='bx bx-message-rounded nav__icon'></i>
-                        <span class="nav__name">Messages</span>
+                        <span class="nav__name">Mensagens</span>
                     </a>
                 </div>
 
@@ -107,16 +107,16 @@
                     <div class="nav__dropdown">
                         <a href="#" class="nav__link">
                             <i class='bx bx-bell nav__icon'></i>
-                            <span class="nav__name">Notifications</span>
+                            <span class="nav__name">Nodificações</span>
                             <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                         </a>
 
                         <div class="nav__dropdown-collapse">
                             <div class="nav__dropdown-content">
-                                <a href="#" class="nav__dropdown-item">Blocked</a>
-                                <a href="#" class="nav__dropdown-item">Silenced</a>
-                                <a href="#" class="nav__dropdown-item">Publish</a>
-                                <a href="#" class="nav__dropdown-item">Program</a>
+                                <a href="#" class="nav__dropdown-item">Bloqueadas</a>
+                                <a href="#" class="nav__dropdown-item">Silênciadas</a>
+                                <a href="#" class="nav__dropdown-item">Publicadas</a>
+                                <a href="#" class="nav__dropdown-item">Programadas</a>
                             </div>
                         </div>
 
@@ -124,11 +124,11 @@
 
                     <a href="#" class="nav__link">
                         <i class='bx bx-compass nav__icon'></i>
-                        <span class="nav__name">Explore</span>
+                        <span class="nav__name">Explorar</span>
                     </a>
                     <a href="#" class="nav__link">
                         <i class='bx bx-bookmark nav__icon'></i>
-                        <span class="nav__name">Saved</span>
+                        <span class="nav__name">Salvos</span>
                     </a>
                 </div>
             </div>
@@ -136,7 +136,7 @@
 
         <a href="#" class="nav__link nav__logout">
             <i class='bx bx-log-out nav__icon'></i>
-            <span class="nav__name">Log Out</span>
+            <span class="nav__name">Sair</span>
         </a>
     </nav>
 </div>

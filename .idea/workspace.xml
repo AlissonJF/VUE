@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f01bb703-9023-4407-a5bb-9ed7deb5d612" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/graphpage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/graphpage_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/graphpage/app.vue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/graphpage/app.vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builder.php" beforeDir="false" afterPath="$PROJECT_DIR$/builder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index/app.vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/index/app.vue.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +73,7 @@
       <workItem from="1652961089685" duration="742000" />
       <workItem from="1652961904196" duration="525000" />
       <workItem from="1652969266139" duration="8493000" />
-      <workItem from="1653045217919" duration="15636000" />
+      <workItem from="1653045217919" duration="16006000" />
     </task>
     <servers />
   </component>
