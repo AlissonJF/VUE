@@ -10,7 +10,6 @@ class Index extends Controller {
     }
 
     function index() {
-
         $this->view->title = "Home";
         array_push($this->view->js, "views/index/app.vue.js");
         array_push($this->view->css, "views/index/app.vue.css");

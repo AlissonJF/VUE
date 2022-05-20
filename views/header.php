@@ -19,16 +19,29 @@
 
     <!-- Essentail JS2 for Vue  (All components Styles) -->
     <link href="https://cdn.syncfusion.com/ej2/20.1.55/material.css" rel="stylesheet" type="text/css"/>
+
+    <?php if (isset($this->css)) {
+        foreach ($this->css as $c) {
+            echo ("<link href=\"" . URL . "$c\" rel=\"stylesheet\" type=\"text/css\">\n");
+        }
+    } ?>
     <!-- Vue library file-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js" type="text/javascript"></script>
     <!-- Essential JS 2 for Vue  global script -->
     <script src="https://cdn.syncfusion.com/ej2/20.1.55/ej2-vue-es5/dist/ej2-vue.min.js"
             type="text/javascript"></script>
+
+    <?php
+    if (isset($this->js)) {
+        foreach ($this->js as $j) {
+            echo ("<script src='" . URL . "$j' type='text/javascript'></script>\n");
+        }
+    } ?>
 </head>
 
 <body>
 <!--========== HEADER ==========-->
-<header class="header" style="background: #005BAA;">
+<header class="header">
     <div class="header__container">
         <a href="#" class="header__logo">Estrutura MVC</a>
 
@@ -115,11 +128,16 @@
     </nav>
 </div>
 
-<div id="mainLayout"> <AppVue></AppVue> </div>
+<div id="mainLayout"></div>
 
 <script>
     const mainLayout = new Vue({
         el: '#mainLayout',
+        template: `
+            <div>
+                <AppVue></AppVue>
+            </div>
+        `,
         data: function () {
             return {}
         },

@@ -74,7 +74,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--container-color);
+    background-color: var(--first-color);
     box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
     padding: 0 1rem;
     z-index: var(--z-fixed);
@@ -94,9 +94,14 @@ img {
 }
 
 .header__logo {
-    color: var(--title-color);
+    color: var(--first-color-light);
     font-weight: var(--font-medium);
     display: none;
+}
+
+.header__logo:hover {
+    color: var(--title-color);
+    transition: .2s;
 }
 
 .header__search {
