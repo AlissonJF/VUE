@@ -52,7 +52,7 @@ const AppTemplate = `
         v-on:click.native="btnClickGraph"
         :contentGraph="contentValue"
         >Página do Gráfico</ejs-button>
-        
+
         <ejs-button
         ref="toggleBtn"
         cssClass="e-flat"
@@ -71,31 +71,31 @@ Vue.component('AppVue', {
     data: function() {
         return {
             seriesData: [
-                { x: new Date(2005, 0, 1), y: 70 },
-                { x: new Date(2006, 0, 1), y: 57 },
-                { x: new Date(2007, 0, 1), y: 54 },
-                { x: new Date(2008, 0, 1), y: 38 },
-                { x: new Date(2009, 0, 1), y: 36 },
-                { x: new Date(2010, 0, 1), y: 24 },
-                { x: new Date(2011, 0, 1), y: 21 }
+                { x: new Date(2016, 0, 1), y: 70 },
+                { x: new Date(2017, 0, 1), y: 57 },
+                { x: new Date(2018, 0, 1), y: 54 },
+                { x: new Date(2019, 0, 1), y: 38 },
+                { x: new Date(2020, 0, 1), y: 36 },
+                { x: new Date(2021, 0, 1), y: 24 },
+                { x: new Date(2022, 0, 1), y: 50 }
             ],
             seriesData1: [
-                { x: new Date(2005, 0, 1), y: 28 },
-                { x: new Date(2006, 0, 1), y: 44 },
-                { x: new Date(2007, 0, 1), y: 48 },
-                { x: new Date(2008, 0, 1), y: 50 },
-                { x: new Date(2009, 0, 1), y: 66 },
-                { x: new Date(2010, 0, 1), y: 78 },
-                { x: new Date(2011, 0, 1), y: 84 }
+                { x: new Date(2016, 0, 1), y: 28 },
+                { x: new Date(2017, 0, 1), y: 44 },
+                { x: new Date(2018, 0, 1), y: 48 },
+                { x: new Date(2019, 0, 1), y: 50 },
+                { x: new Date(2020, 0, 1), y: 66 },
+                { x: new Date(2021, 0, 1), y: 78 },
+                { x: new Date(2022, 0, 1), y: 84 }
             ],
             seriesData2: [
-                { x: new Date(2005, 0, 1), y: 50 },
-                { x: new Date(2006, 0, 1), y: 40 },
-                { x: new Date(2007, 0, 1), y: 60 },
-                { x: new Date(2008, 0, 1), y: 80 },
-                { x: new Date(2009, 0, 1), y: 75 },
-                { x: new Date(2010, 0, 1), y: 85 },
-                { x: new Date(2011, 0, 1), y: 90 }
+                { x: new Date(2016, 0, 1), y: 50 },
+                { x: new Date(2017, 0, 1), y: 40 },
+                { x: new Date(2018, 0, 1), y: 60 },
+                { x: new Date(2019, 0, 1), y: 80 },
+                { x: new Date(2020, 0, 1), y: 75 },
+                { x: new Date(2021, 0, 1), y: 85 },
+                { x: new Date(2022, 0, 1), y: 90 }
             ],
             //Initializing Primary X Axis
             primaryXAxis: {
@@ -129,7 +129,7 @@ Vue.component('AppVue', {
             tooltip: {
                 enable: true
             },
-            title: "Test Chart Component",
+            title: "Teste do Componente, Gráfico simples",
             // Botão para próxima página
             contentGraph: "Página do Gráfico",
             content: "Página do Dashboard"

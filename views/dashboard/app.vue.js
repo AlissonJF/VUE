@@ -4,7 +4,7 @@ const AppTemplate = `
     <div>
         <div class="control-section dashboard-default">
             <div style="padding:5px;text-align: right;">
-                <ejs-button id="add" class="e-btn e-info"  v-on:click.native="addPanel"> Add Panel </ejs-button>
+                <ejs-button id="add" class="e-btn e-info"  v-on:click.native="addPanel"> Adicionar mais Paineis </ejs-button>
             </div>
                 <ejs-dashboardlayout ref="DashbordInstance" :columns="5" id='defaultLayout' :allowResizing="true" :cellSpacing="spacing">
                     <div id="one" class="e-panel" data-row="0" data-col="0" data-sizeX="1" data-sizeY="1">
