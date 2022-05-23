@@ -46,13 +46,21 @@ const AppTemplate = `
         <br>
         <ejs-button
         ref="toggleBtn"
-        :iconCss="iconCssValue"
+        cssClass="e-flat"
+        :isPrimary="true"
+        :isToggle="true"
+        v-on:click.native="btnClickGraph"
+        :contentGraph="contentValue"
+        >Página do Gráfico</ejs-button>
+        
+        <ejs-button
+        ref="toggleBtn"
         cssClass="e-flat"
         :isPrimary="true"
         :isToggle="true"
         v-on:click.native="btnClick"
         :content="contentValue"
-        >Próxima Página</ejs-button>
+        >Página de Dashboard</ejs-button>
     </div>
 </div>
 
@@ -123,40 +131,35 @@ Vue.component('AppVue', {
             },
             title: "Test Chart Component",
             // Botão para próxima página
-            content: "Próxima Página",
-            iconCss: 'e-btn-sb-icons e-play-icon'
+            contentGraph: "Página do Gráfico",
+            content: "Página do Dashboard"
         }
     },
     computed: {
         contentValue: {
-            get:function () {
+            get: function() {
                 return this.content;
             },
-            set:function (content) {
+            set: function(content) {
                 this.content = content
-            }
-        },
-        iconCssValue: {
-            get: function() {
-                return this.iconCss;
-            },
-            set: function (iconCss) {
-                this.iconCss = iconCss
             }
         }
     },
     methods: {
-        btnClick: function (event) {
+        btnClickGraph: function(event) {
             console.log(BASE)
 
             window.location.href = BASE + "/graphpage"
-            // if (this.$refs.toggleBtn.$el.classList.contains("e-active")) {
-            //     this.contentValue = "Próxima Página";
-            //     this.iconCssValue = "e-btn-sb-icons e-play-icon";
-            // } else {
-            //     this.contentValue = "Pause";
-            //     this.iconCssValue = "e-btn-sb-icons e-pause-icon";
-            // }
+                // if (this.$refs.toggleBtn.$el.classList.contains("e-active")) {
+                //     this.contentValue = "Próxima Página";
+                //     this.iconCssValue = "e-btn-sb-icons e-play-icon";
+                // } else {
+                //     this.contentValue = "Pause";
+                //     this.iconCssValue = "e-btn-sb-icons e-pause-icon";
+                // }
+        },
+        btnClick: function(event) {
+            window.location.href = BASE + "/dashboard"
         }
     }
 })

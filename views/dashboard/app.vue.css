@@ -1,0 +1,59 @@
+.dashboard-default #defaultLayout.e-dashboardlayout.e-control .e-panel:hover span {
+    display: block;
+}
+
+.dashboard-default #defaultLayout .e-panel .e-panel-container .text-align {
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.dashboard-default .e-template-icon {
+    padding: 10px;
+    float: right;
+    display: none;
+}
+
+.dashboard-default .e-clear-icon::before {
+    content: '\e7a7';
+    font-size: 12px;
+    font-family: 'e-icons';
+}
+
+.bootstrap4 .dashboard-default .e-clear-icon::before {
+    content: '\e745';
+}
+
+.tailwind .dashboard-default .e-clear-icon::before,
+.tailwind-dark .dashboard-default .e-clear-icon::before {
+    content: '\e771';
+    font-size: 16px;
+}
+
+.bootstrap5 .dashboard-default .e-clear-icon::before,
+.bootstrap5-dark .dashboard-default .e-clear-icon::before {
+    content: '\e7e7';
+    font-size: 16px;
+}
+
+.dashboard-default .text-align {
+    line-height: 160px;
+}
+
+.dashboard-default .e-clear-icon {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+
+/* high contrast style */
+
+body.highcontrast .dashboard-default #defaultLayout.e-dashboardlayout.e-control .e-panel {
+    background: #000;
+}
+
+body.tailwind-dark .e-dashboardlayout.e-control .e-panel {
+    border: 1px solid #d7d7d7;
+}
