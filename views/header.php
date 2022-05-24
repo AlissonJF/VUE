@@ -18,9 +18,11 @@
     <link rel="stylesheet" href="<?= URL ?>public/css/main.css">
 
     <!-- Essentail JS2 for Vue  (All components Styles) -->
-    <link href="https://cdn.syncfusion.com/ej2/20.1.55/material.css" rel="stylesheet" type="text/css"/>
-    <link href="<?=URL?>public/plugins/essentialui/styles/material.min.css" rel="stylesheet">
-    <link href="<?=URL?>public/plugins/fontawesome-free/css/all.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.1.55/material.css" rel="stylesheet" type="text/css" />
+    <link href="<?= URL ?>public/plugins/essentialui/styles/material.min.css" rel="stylesheet">
+    <link href="<?= URL ?>public/plugins/fontawesome-free/css/all.css" rel="stylesheet">
+    <link href="<?= URL ?>public/mdb/mdb.min.css" rel="stylesheet">
+    <link href="<?= URL ?>public/mdb/css/mdb.min.css" rel="stylesheet">
     <?php if (isset($this->css)) {
         foreach ($this->css as $c) {
             echo ("<link href=\"" . URL . "$c\" rel=\"stylesheet\" type=\"text/css\">\n");
@@ -30,8 +32,7 @@
     <!-- Vue library file-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js" type="text/javascript"></script>
     <!-- Essential JS 2 for Vue  global script -->
-    <script src="https://cdn.syncfusion.com/ej2/20.1.55/ej2-vue-es5/dist/ej2-vue.min.js"
-            type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/ej2/20.1.55/ej2-vue-es5/dist/ej2-vue.min.js" type="text/javascript"></script>
     <script src="<?= URL ?>public/plugins/essentialui/scripts/internationalization/traducaoComponentes.js" type="text/javascript"></script>
     <script src="<?= URL ?>public/plugins/essentialui/scripts/internationalization/currencyData.js" type="text/javascript"></script>
     <script src="<?= URL ?>public/plugins/essentialui/scripts/internationalization/currencies.js" type="text/javascript"></script>
@@ -43,6 +44,7 @@
     <script src="<?= URL ?>public/plugins/essentialui/scripts/ej2-vue.min.js" type="text/javascript"></script>
     <script src="<?= URL ?>public/plugins/axios/axios.min.js" type="text/javascript"></script>
     <script src="<?= URL ?>public/dist/js/common.js" type="text/javascript"></script>
+    <script src="<?= URL ?>public/mdb/js/mdb.min.js"></script>
 
     <?php
     if (isset($this->js)) {
@@ -53,109 +55,111 @@
 </head>
 
 <body>
-<!--========== HEADER ==========-->
-<header class="header">
-    <div class="header__container">
-        <a href="#" class="header__logo">Estrutura MVC - VUE</a>
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="header__logo">Estrutura MVC - VUE</a>
 
-        <a href="#" class="header__logo">Alisson Juan Feitoza da Silva</a>
+            <a href="#" class="header__logo">Alisson Juan Feitoza da Silva</a>
 
-        <div class="header__toggle">
-            <i class='bx bx-menu' id="header-toggle"></i>
-        </div>
-    </div>
-</header>
-
-<!--========== NAV ==========-->
-<div class="nav" id="navbar">
-    <nav class="nav__container">
-        <div>
-            <a href="<?=URL?>" class="nav__link nav__logo">
-                <i class='bx bx-home nav__icon'></i>
-                <span class="nav__logo-name">Início</span>
-            </a>
-
-            <div class="nav__list">
-                <div class="nav__items">
-                    <h3 class="nav__subtitle">Perfil</h3>
-
-                    <div class="nav__dropdown">
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-user nav__icon'></i>
-                            <span class="nav__name">Opções do Perfil</span>
-                            <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-                        </a>
-
-                        <div class="nav__dropdown-collapse">
-                            <div class="nav__dropdown-content">
-                                <a href="#" class="nav__dropdown-item">Senha</a>
-                                <a href="#" class="nav__dropdown-item">Email</a>
-                                <a href="#" class="nav__dropdown-item">Nova Conta</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="#" class="nav__link">
-                        <i class='bx bx-message-rounded nav__icon'></i>
-                        <span class="nav__name">Mensagens</span>
-                    </a>
-                </div>
-
-                <div class="nav__items">
-                    <h3 class="nav__subtitle">Menu</h3>
-
-                    <div class="nav__dropdown">
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-bell nav__icon'></i>
-                            <span class="nav__name">Nodificações</span>
-                            <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-                        </a>
-
-                        <div class="nav__dropdown-collapse">
-                            <div class="nav__dropdown-content">
-                                <a href="#" class="nav__dropdown-item">Bloqueadas</a>
-                                <a href="#" class="nav__dropdown-item">Silênciadas</a>
-                                <a href="#" class="nav__dropdown-item">Publicadas</a>
-                                <a href="#" class="nav__dropdown-item">Programadas</a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <a href="#" class="nav__link">
-                        <i class='bx bx-compass nav__icon'></i>
-                        <span class="nav__name">Explorar</span>
-                    </a>
-                    <a href="#" class="nav__link">
-                        <i class='bx bx-bookmark nav__icon'></i>
-                        <span class="nav__name">Salvos</span>
-                    </a>
-                </div>
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
             </div>
         </div>
+    </header>
 
-        <a href="#" class="nav__link nav__logout">
-            <i class='bx bx-log-out nav__icon'></i>
-            <span class="nav__name">Sair</span>
-        </a>
-    </nav>
-</div>
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="<?= URL ?>" class="nav__link nav__logo">
+                    <i class='bx bx-home nav__icon'></i>
+                    <span class="nav__logo-name">Início</span>
+                </a>
 
-<div id="mainLayout"></div>
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Perfil</h3>
 
-<script>
-    const mainLayout = new Vue({
-        el: '#mainLayout',
-        template: `
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-user nav__icon'></i>
+                                <span class="nav__name">Opções do Perfil</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="#" class="nav__dropdown-item">Senha</a>
+                                    <a href="#" class="nav__dropdown-item">Email</a>
+                                    <a href="#" class="nav__dropdown-item">Nova Conta</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message-rounded nav__icon'></i>
+                            <span class="nav__name">Mensagens</span>
+                        </a>
+
+                        <a href="<?=URL?>coloracao" class="nav__link">
+                            <i class='bx bxs-pen nav__icon'></i>
+                            <span class="nav__name">Colorações</span>
+                        </a>
+                    </div>
+
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Menu</h3>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-bell nav__icon'></i>
+                                <span class="nav__name">Nodificações</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="<?= URL ?>nodificacao" class="nav__dropdown-item">Aparecer Nodificação</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-compass nav__icon'></i>
+                            <span class="nav__name">Explorar</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bookmark nav__icon'></i>
+                            <span class="nav__name">Salvos</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="nav__link nav__logout">
+                <i class='bx bx-log-out nav__icon'></i>
+                <span class="nav__name">Sair</span>
+            </a>
+        </nav>
+    </div>
+
+    <div id="mainLayout"></div>
+
+    <script>
+        const mainLayout = new Vue({
+            el: '#mainLayout',
+            template: `
             <div>
                 <AppVue></AppVue>
             </div>
         `,
-        data: function () {
-            return {}
-        },
-        methods: {}
-    })
-</script>
+            data: function() {
+                return {}
+            },
+            methods: {}
+        })
+    </script>
 
 </body>
