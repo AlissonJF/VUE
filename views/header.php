@@ -69,7 +69,7 @@
     </header>
 
     <!--========== NAV ==========-->
-    <div class="nav" id="navbar">
+    <div class="nav" id="navbar" style="padding-left: 20px;">
         <nav class="nav__container">
             <div>
                 <a href="<?= URL ?>" class="nav__link nav__logo">
@@ -102,7 +102,12 @@
                             <span class="nav__name">Mensagens</span>
                         </a>
 
-                        <a href="<?=URL?>coloracao" class="nav__link">
+                        <a href="<?= URL ?>form" class="nav__link">
+                            <i class='bx bxs-file nav__icon'></i>
+                            <span class="nav__name">Formulário</span>
+                        </a>
+
+                        <a href="<?= URL ?>coloracao" class="nav__link">
                             <i class='bx bxs-pen nav__icon'></i>
                             <span class="nav__name">Colorações</span>
                         </a>

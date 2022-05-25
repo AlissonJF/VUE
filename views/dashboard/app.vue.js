@@ -1,6 +1,6 @@
 const AppTemplate = `
 
-<div class="control-section">
+<div class="control-section" style="margin-top: 5%;">
     <div>
         <div class="control-section dashboard-default">
             <div style="padding:5px;text-align: right;">

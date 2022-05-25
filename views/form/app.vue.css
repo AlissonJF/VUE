@@ -1,0 +1,14 @@
+.validation .control_wrapper {
+    max-width: 450px;
+    min-width: 245px;
+    margin: auto;
+}
+
+#validation .e-upload.e-control {
+    position: relative;
+    margin: 15px 0;
+}
+
+.control-section .uploader-preload.col-lg-8 {
+    padding: 20px;
+}

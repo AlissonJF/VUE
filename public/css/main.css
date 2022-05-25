@@ -156,7 +156,6 @@ img {
     padding-bottom: 3rem;
     overflow: auto;
     scrollbar-width: none;
-    margin-left: 10%;
     /* For mozilla */
 }
 
