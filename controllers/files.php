@@ -1,7 +1,7 @@
 
 <?php
 
-class Form extends Controller {
+class Files extends Controller {
 
     function __construct() {
         parent::__construct();
@@ -11,10 +11,10 @@ class Form extends Controller {
 
     function index()
     {
-        $this->view->title = " Formulário";
+        $this->view->title = " Arquivos";
         /*Os array push devem ser feitos antes de instanciar o header e footer.*/
-        array_push($this->view->js, "views/form/app.vue.js");
-        array_push($this->view->css, "views/form/app.vue.css");
+        array_push($this->view->js, "views/files/app.vue.js");
+        array_push($this->view->css, "views/files/app.vue.css");
         $this->view->render("header");
         $this->view->render("footer");
     }

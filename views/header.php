@@ -102,9 +102,9 @@
                             <span class="nav__name">Mensagens</span>
                         </a>
 
-                        <a href="<?= URL ?>form" class="nav__link">
-                            <i class='bx bxs-file nav__icon'></i>
-                            <span class="nav__name">Formulário</span>
+                        <a href="<?= URL ?>files" class="nav__link">
+                            <i class='bx bx-upload nav__icon'></i>
+                            <span class="nav__name">Arquivos</span>
                         </a>
 
                         <a href="<?= URL ?>coloracao" class="nav__link">
