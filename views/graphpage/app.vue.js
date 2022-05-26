@@ -1,6 +1,6 @@
 const AppTemplate = `
 
-<div class="control-section">
+<div class="control-section" style="margin-top: 5%;">
     <div class="row">
         <div class="col-md-6 control-section">
             <ejs-accumulationchart  ref='pie' theme='Material' style='display:block' align='center' id='chartcontainer' :title='title'
