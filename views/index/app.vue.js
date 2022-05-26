@@ -147,16 +147,7 @@ Vue.component('AppVue', {
     },
     methods: {
         btnClickGraph: function(event) {
-            console.log(BASE)
-
             window.location.href = BASE + "/graphpage"
-                // if (this.$refs.toggleBtn.$el.classList.contains("e-active")) {
-                //     this.contentValue = "Próxima Página";
-                //     this.iconCssValue = "e-btn-sb-icons e-play-icon";
-                // } else {
-                //     this.contentValue = "Pause";
-                //     this.iconCssValue = "e-btn-sb-icons e-pause-icon";
-                // }
         },
         btnClick: function(event) {
             window.location.href = BASE + "/dashboard"
