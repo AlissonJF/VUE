@@ -93,6 +93,7 @@
                                     <a href="<?= URL ?>card" class="nav__dropdown-item">Infos</a>
                                     <a href="#" class="nav__dropdown-item">Email</a>
                                     <a href="#" class="nav__dropdown-item">Nova Conta</a>
+                                    <a href="<?= URL ?>diagrama" class="nav__dropdown-item">Diagrama</a>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +132,7 @@
 
                         </div>
 
-                        <a href="#" class="nav__link">
+                        <a href="<?= URL ?>map" class="nav__link">
                             <i class='bx bx-compass nav__icon'></i>
                             <span class="nav__name">Explorar</span>
                         </a>

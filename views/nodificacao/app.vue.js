@@ -1,6 +1,6 @@
 const AppTemplate = `
 
-<div class="control-section" style="margin-left: 25%">
+<div class="control-section" style="margin: 5% 30%">
     <div class="control-section toast-type-section">
         <div class="e-sample-resize-container">
             <ejs-toast ref='toastRef' id='toast_type' :position='position' :created='created' :close='onclose' :beforeOpen='onbeforeOpen'>
@@ -8,13 +8,34 @@ const AppTemplate = `
         </div>
         <div id="toast_types">
             <div>
-                <ejs-button ref='infoRef' class="e-btn e-control e-info" id="info_Toast" v-on:click.native="infoClick"> Info Message </ejs-button>
-                <ejs-button ref='successRef' class="e-btn e-control e-success" id="success_Toast" v-on:click.native='successClick'> Success Message </ejs-button>
-                <ejs-button ref='warningRef' class="e-btn e-control e-warning" id="warning_Toast" v-on:click.native="warningClick"> Warning Message </ejs-button>
-                <ejs-button ref='errorRef' class="e-btn e-control e-danger" id="error_Toast" v-on:click.native="errorClick">Danger Message</ejs-button>
+                <ejs-button
+                    ref='infoRef'
+                    class="e-btn e-control e-info"
+                    id="info_Toast"
+                    v-on:click.native="infoClick"> Mensagem de Informações </ejs-button>
+                <ejs-button
+                    ref='successRef'
+                    class="e-btn e-control e-success"
+                    id="success_Toast"
+                    v-on:click.native='successClick'> Mensagem de Sucesso </ejs-button>
+                <ejs-button
+                    ref='warningRef'
+                    class="e-btn e-control e-warning"
+                    id="warning_Toast"
+                    v-on:click.native="warningClick"> Mensagem de Cuidado </ejs-button>
+                <ejs-button
+                    ref='errorRef'
+                    class="e-btn e-control e-danger"
+                    id="error_Toast"
+                    v-on:click.native="errorClick"> Mensagem de Perigo </ejs-button>
             </div>
-            <div style="padding-top: 15px; margin-left: 24%;">
-                <ejs-button ref='hideButtonRef' v-if="ShowBtn" class="e-btn e-control" id="hideToast" v-on:click.native="hideClick"> Hide All </ejs-button>
+            <div style="margin: 30px 22%;">
+                <ejs-button
+                    ref='hideButtonRef'
+                    v-if="ShowBtn"
+                    class="e-btn e-control"
+                    id="hideToast"
+                    v-on:click.native="hideClick"> Apagar Todos </ejs-button>
             </div>
         </div>
     </div>
@@ -31,11 +52,30 @@ Vue.component("AppVue", {
         }
     },
     mounted: function() {
-        this.toasts = [
-            { title: 'Warning!', content: 'There was a problem with your network connection.', cssClass: 'e-toast-warning', icon: 'e-warning toast-icons' },
-            { title: 'Success!', content: 'Your message has been sent successfully.', cssClass: 'e-toast-success', icon: 'e-success toast-icons' },
-            { title: 'Error!', content: 'A problem has been occurred while submitting your data.', cssClass: 'e-toast-danger', icon: 'e-error toast-icons' },
-            { title: 'Information!', content: 'Please read the comments carefully.', cssClass: 'e-toast-info', icon: 'e-info toast-icons' }
+        this.toasts = [{
+                title: 'Cuidado!',
+                content: 'Houve um problema com sua conexão de rede.',
+                cssClass: 'e-toast-warning',
+                icon: 'e-warning toast-icons'
+            },
+            {
+                title: 'Sucesso!',
+                content: 'Sua mensagem foi enviada com sucesso.',
+                cssClass: 'e-toast-success',
+                icon: 'e-success toast-icons'
+            },
+            {
+                title: 'Erro!',
+                content: 'Um problema ocorreu durante o envio de seus dados.',
+                cssClass: 'e-toast-danger',
+                icon: 'e-error toast-icons'
+            },
+            {
+                title: 'Informação!',
+                content: 'Por favor, leia os comentários com atenção.',
+                cssClass: 'e-toast-info',
+                icon: 'e-info toast-icons'
+            }
         ];
         setTimeout(() => {
             this.$refs.toastRef.show(this.toasts[3]);
@@ -59,7 +99,15 @@ Vue.component("AppVue", {
         },
         created: function(args) {
             document.addEventListener('click', function() {
-                if (!isNullOrUndefined(this.$refs.toastRef) && !isNullOrUndefined(this.$refs.successRef) && !isNullOrUndefined(this.$refs.errorRef) && !isNullOrUndefined(this.$refs.infoRef) && !isNullOrUndefined(this.$refs.warningRef) && event.target !== this.$refs.infoRef.$el && event.target !== this.$refs.warningRef.$el && event.target !== this.$refs.successRef.$el && event.target !== this.$refs.errorRef.$el) {
+                if (!isNullOrUndefined(this.$refs.toastRef) &&
+                    !isNullOrUndefined(this.$refs.successRef) &&
+                    !isNullOrUndefined(this.$refs.errorRef) &&
+                    !isNullOrUndefined(this.$refs.infoRef) &&
+                    !isNullOrUndefined(this.$refs.warningRef) &&
+                    event.target !== this.$refs.infoRef.$el &&
+                    event.target !== this.$refs.warningRef.$el &&
+                    event.target !== this.$refs.successRef.$el &&
+                    event.target !== this.$refs.errorRef.$el) {
                     this.$refs.toastRef.hide('All');
                 }
             }.bind(this));
