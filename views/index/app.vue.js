@@ -147,10 +147,10 @@ Vue.component('AppVue', {
     },
     methods: {
         btnClickGraph: function(event) {
-            window.location.href = BASE + "/graphpage"
+            //window.location.href = BASE + "/graphpage"
         },
         btnClick: function(event) {
-            window.location.href = BASE + "/dashboard"
+            //window.location.href = BASE + "/dashboard"
         }
     }
 })

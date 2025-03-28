@@ -1,7 +1,7 @@
 <?php
 
 // coloque a barra / no final
-define('URL', 'http://localhost/estagio/VUE/');
+define('URL', 'http://localhost/VUE/');
 // **** OBS:> alterar também a url do preloader no main.css
 
 define('LIBS', 'libs/');

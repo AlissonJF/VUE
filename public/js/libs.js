@@ -1,4 +1,4 @@
-var BASEURL = "http://localhost/estagio/VUE/";
+var BASEURL = "http://localhost/VUE/";
 
 async function getUrl(url) {
     const response = await axios.get(url);

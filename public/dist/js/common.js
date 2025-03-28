@@ -1,4 +1,4 @@
-BASE = 'http://localhost/estagio/VUE';
+BASE = 'http://localhost/VUE';
 
 var browsers = ["Opera", "Edg", "Chrome", "Safari", "Firefox", "MSIE", "Trident"];
 var userbrowser, useragent = navigator.userAgent;
