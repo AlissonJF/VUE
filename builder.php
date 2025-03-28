@@ -1,8 +1,8 @@
 <?php
 
-if (count($argv) > 2) {
-    echo 'O script builder.php só aceita 1 parametro: nome. Ele deve ser escrito com todas as palavras' .
-        ' emendadas com as iniciais maiúsculas, sem acentos ou caracterers especiais. Ex: "php builder.php Login" ou "php builder.php CadastroPrincipal".';
+if (count($argv) > 3) {
+    echo 'O script builder.php só aceita 2 parametro: nome do arquivo e o nome do title. Eles devem ser escritos com todas as palavras' .
+        ' emendadas com as iniciais maiúsculas, sem acentos ou caracterers especiais. Ex: "php builder.php Login Login" ou "php builder.php ManutencaoPolos ManutençãoPolos".';
     exit;
 }
 
@@ -13,7 +13,7 @@ if (!folder_exist('models') || !folder_exist('controllers') || !folder_exist('vi
 
 if (!strtolower($argv[1])) {
     echo 'Você precisa digitar o parametro nome para executar o script. (O nome deve ser escrito com todas as palavras' .
-        ' emendadas com as iniciais maiúsculas, sem acentos ou caracterers especiais. Ex: "php builder.php Login" ou "php builder.php CadastroPrincipal".)';
+         ' emendadas com as iniciais maiúsculas, sem acentos ou caracterers especiais. Ex: "php builder.php Login" ou "php builder.php CadastroPrincipal".)';
     exit;
 }
 
@@ -25,7 +25,8 @@ if (!ctype_upper(substr($argv[1], 0, 1))) {
 
 $fileName = strtolower(tirarAcentos($argv[1]));
 $name = tirarAcentos($argv[1]);
-$titleName = preg_replace('/(?<!\ )[A-Z]/', ' $0', $name);
+$titleName = trim(preg_replace('/(?<!\ )[A-Z]/', ' $0', $argv[2]));
+$apresentacaoSistema = "Portal Unimar EAD - ";
 
 $model = '
 <?php
@@ -58,7 +59,7 @@ class ' . $name . ' extends Controller {
 
     function index()
     {
-        $this->view->title = "' . $titleName . '";
+        $this->view->title = "'. $apresentacaoSistema . $titleName . '";
         /*Os array push devem ser feitos antes de instanciar o header e footer.*/
         array_push($this->view->js, "views/' . $fileName . '/app.vue.js");
         array_push($this->view->css, "views/' . $fileName . '/app.vue.css");
@@ -75,11 +76,19 @@ file_put_contents('controllers/' . $fileName . '.php', $controller);
 
 $jsView = '
 const AppTemplate = `
-
-<div class="control-section" style="margin-top: 5%">
-    
+<div class="col-md-12 control-section card-control-section basic_card_layout">
+  <div class="e-card-resize-container" style="margin-bottom: 90px">
+    <div class="row">
+      <div class="col-md-12 card-layout" style="padding: 0 !important;">
+        <div tabindex="0" class="e-card" id="basic_card">
+          <div class="e-card-content">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
 `;
 
 Vue.component("AppVue", {
