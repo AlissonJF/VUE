@@ -47,9 +47,11 @@ Vue.component('AppVue', {
             axios.post(BASE + "/cadastro/getBoletim", {"testeEnvio": this.valorTexto}).then(res => {
                 if (res.data.code == 1) {
                     alert(res.data.msg);
+                    alert(res.data.textoDigitado);
                     this.dataSource = res.data.dados;
                 } else if (res.data.code == 0) {
                     alert(res.data.msg);
+                    alert(res.data.textoDigitado);
                 } else {
                     alert("Não foi possível realizar a ação.");
                 }
