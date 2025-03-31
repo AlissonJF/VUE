@@ -90,10 +90,7 @@
 
                             <div class="nav__dropdown-collapse">
                                 <div class="nav__dropdown-content">
-                                    <a href="<?= URL ?>" class="nav__dropdown-item">Infos</a>
-                                    <a href="#" class="nav__dropdown-item">Email</a>
-                                    <a href="#" class="nav__dropdown-item">Nova Conta</a>
-                                    <a href="<?= URL ?>" class="nav__dropdown-item">Diagrama</a>
+                                    <a href="<?= URL ?>cadastro" class="nav__dropdown-item">Cadastro de Usuários</a>
                                 </div>
                             </div>
                         </div>
