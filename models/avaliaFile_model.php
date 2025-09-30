@@ -51,15 +51,7 @@ class AvaliaFile_Model extends Model
                 echo "Mensagem do Python: " . $resposta["mensagem"];
             }
         }
-
-        exit;
-
-        // $result = $this->db->select("SELECT * FROM ESCOLA.TESTE");
-
-        // if (count($result) > 0) {
-        //     exit(json_encode(array("code" => 1, "msg" => "Busca realizada com sucesso.", "dados" => $result, "textoDigitado" => $post->testeEnvio)));
-        // } else {
-        //     exit(json_encode(array("code" => 0, "msg" => "Não foi possível encontrar nenhum registro.", "textoDigitado" => $post->testeEnvio)));
-        // }
+        
+        echo "Erro ao tentar processar a avaliação do arquivo!";
     }
 }
