@@ -48,9 +48,9 @@ def verificar_duplicidade(novo_texto, base_documentos, similaridade_min=90):
             return True, "Duplicado!"
         
         # Verifica similaridade (fuzzy matching)
-        score = fuzz.token_set_ratio(novo_texto, doc['texto'])
-        if score >= similaridade_min:
-            return True, f"Provavelmente está Duplicado.: ({score:.1f}%)"
+        # score = fuzz.token_set_ratio(novo_texto, doc['texto'])
+        # if score >= similaridade_min:
+        #     return True, f"Provavelmente está Duplicado.: ({score:.1f}%)"
         
     return False, "Documento OK!"
 
@@ -183,7 +183,7 @@ if __name__ == "__main__":
     #print("Documento cadastrado!")
 
     # Testa outro PDF
-    caminho_pdf_teste = base / "arquivos" / "Certificado_Saber_Virtual-Matemática2.pdf"
+    caminho_pdf_teste = base / "arquivos" / "Certificado_Saber_Virtual-Matemática1.pdf"
 
     # Teste da extração do QRCode
     qrcode_textos = ler_qrcode(caminho_pdf_teste)

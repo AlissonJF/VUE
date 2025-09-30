@@ -45,13 +45,13 @@ class AvaliaFile_Model extends Model
             proc_close($process);
 
             if ($erros) {
-                echo "Erro no Python: $erros";
+                echo "Erro no Python: $erros"; exit;
             } else {
                 $resposta = json_decode($resultado, true);
-                echo "Mensagem do Python: " . $resposta["mensagem"];
+                echo "Mensagem do Python: " . $resposta["mensagem"]; exit;
             }
         }
         
-        echo "Erro ao tentar processar a avaliação do arquivo!";
+        echo "Erro ao tentar processar a avaliação do arquivo!"; exit;
     }
 }
