@@ -100,7 +100,7 @@
                             <span class="nav__name">Mensagens</span>
                         </a>
 
-                        <a href="<?= URL ?>files" class="nav__link">
+                        <a href="<?= URL ?>avaliaFile" class="nav__link">
                             <i class='bx bx-upload nav__icon'></i>
                             <span class="nav__name">Arquivos</span>
                         </a>
