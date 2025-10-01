@@ -10,6 +10,12 @@ class AvaliaFile_Model extends Model
     public function avaliaFile()
     {
         $post = json_decode(file_get_contents('php://input'));
+        
+        if ($post->file == 'matematica1') {
+            $arq = "Certificado_Saber_Virtual-Matemática1.pdf";
+        } else if ($post->file == 'matematica2') {
+            $arq = "Certificado_Saber_Virtual-Matemática2.pdf";
+        }
 
         // Caminho completo do Python
         $python = '"C:\Users\ti.lucas\AppData\Local\Microsoft\WindowsApps\python3.11.exe"';
@@ -19,7 +25,7 @@ class AvaliaFile_Model extends Model
 
         // Dados para enviar
         $dados = [
-            "texto" => $post->file
+            "nomeArq" => $arq
         ];
 
         $json = json_encode($dados);

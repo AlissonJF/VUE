@@ -11,13 +11,6 @@ from pyzbar.pyzbar import decode
 import sys
 from pathlib import Path
 
-# Lê JSON da entrada padrão (STDIN)
-entrada_json = sys.stdin.read()
-dados = json.loads(entrada_json)
-
-# busca texto enviado para o python
-# texto = dados.get("texto", "Desconhecido")
-
 # Extrai texto do PDF
 def extrair_texto_pdf(caminho_pdf):
     reader = PdfReader(caminho_pdf)
@@ -148,11 +141,18 @@ if __name__ == "__main__":
     # Banco de PDFs já avaliados (simulação)
     base_documentos = []
 
+    # Lê JSON da entrada padrão (STDIN)
+    entrada_json = sys.stdin.read()
+    dados = json.loads(entrada_json)
+
+    # busca texto enviado para o python
+    nomeArq = dados.get("nomeArq", "Desconhecido")
+
     # pasta onde está este script (hash.py)
     base = Path(__file__).resolve().parent
 
     # arquivo a ser avaliado dentro da pasta "arquivos"
-    caminho_pdf = base / "arquivos" / "Certificado_Saber_Virtual-Matemática1.pdf"
+    caminho_pdf = base / "arquivos" / nomeArq
 
     # verifica se existe esse arquivo
     if not caminho_pdf.exists():
@@ -183,37 +183,40 @@ if __name__ == "__main__":
     #print("Documento cadastrado!")
 
     # Testa outro PDF
-    caminho_pdf_teste = base / "arquivos" / "Certificado_Saber_Virtual-Matemática1.pdf"
+    # caminho_pdf_teste = base / "arquivos" / "Certificado_Saber_Virtual-Matemática2.pdf"
+    certs_dir = base / "arquivos"
 
-    # Teste da extração do QRCode
-    qrcode_textos = ler_qrcode(caminho_pdf_teste)
-    #print("QR Codes extraídos: ", qrcode_textos)
+    if certs_dir.exists():
+        for caminho_pdf_teste in certs_dir.glob("*.pdf"):
+            # Teste da extração do QRCode
+            qrcode_textos = ler_qrcode(caminho_pdf_teste)
+            #print("QR Codes extraídos: ", qrcode_textos)
 
-    # Busca metadados do arquivo 1
-    # metadados = extrair_metadado(caminho_pdf)
-    # if metadados:
-    #     for chave, valor in metadados.items():
-    #         print(f"{chave}.:{valor}")
-    
-    # Busca metadados do arquivo 2
-    # metadados2 = extrair_metadado(caminho_pdf_teste)
-    # if metadados2:
-    #     for chave, valor in metadados2.items():
-    #         print(f"{chave}.:{valor}")
+            # Busca metadados do arquivo 1
+            # metadados = extrair_metadado(caminho_pdf)
+            # if metadados:
+            #     for chave, valor in metadados.items():
+            #         print(f"{chave}.:{valor}")
+            
+            # Busca metadados do arquivo 2
+            # metadados2 = extrair_metadado(caminho_pdf_teste)
+            # if metadados2:
+            #     for chave, valor in metadados2.items():
+            #         print(f"{chave}.:{valor}")
 
-    texto_extraido_teste = extrair_texto_pdf(caminho_pdf_teste)
-    #print(f"Texto Extraído.: ({texto_extraido_teste})")
-    texto_teste = normalizar_texto(texto_extraido_teste)
-    #print(f"Texto normalizado.: ({texto_teste})")
+            texto_extraido_teste = extrair_texto_pdf(caminho_pdf_teste)
+            #print(f"Texto Extraído.: ({texto_extraido_teste})")
+            texto_teste = normalizar_texto(texto_extraido_teste)
+            #print(f"Texto normalizado.: ({texto_teste})")
 
-    # Captura a quantidade de horas
-    horas = extrair_horas_do_texto(texto_extraido)
-    # if horas:
-    #     print(f"Quantidade de horas encontrada:", horas)
-    # else:
-    #     print("Nenhuma quantidade de horas encontrada")
+            # Captura a quantidade de horas
+            horas = extrair_horas_do_texto(texto_extraido)
+            # if horas:
+            #     print(f"Quantidade de horas encontrada:", horas)
+            # else:
+            #     print("Nenhuma quantidade de horas encontrada")
 
-    duplicado, motivo = verificar_duplicidade(texto_teste, base_documentos)
+            duplicado, motivo = verificar_duplicidade(texto_teste, base_documentos)
 
     # Colocando o motivo dentro de um objeto
     resposta = {"mensagem": motivo}
